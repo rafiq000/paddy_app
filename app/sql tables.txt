@@ -1,0 +1,13 @@
+CREATE TABLE `app`.`user_list` ( `mobile` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(60) NOT NULL , `address` TEXT NOT NULL , PRIMARY KEY (`mobile`)) ENGINE = InnoDB; 
+
+
+CREATE TABLE `app`.`trans_list` ( `no` INT NOT NULL AUTO_INCREMENT , `date` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP , `mobile` INT NOT NULL , `s_description` VARCHAR NULL , `price` FLOAT NOT NULL , `wight` FLOAT NOT NULL , `amount` FLOAT NOT NULL , PRIMARY KEY (`no`), INDEX `mobile` (`mobile`)) ENGINE = InnoDB; 
+
+INSERT INTO  user_rights (`user_id`,`right`,`group_id`,`created_date`) VALUES ( '42',  '160',  '1',  now());
+
+
+CREATE TABLE `app`.`cash_in_list` ( `no` INT NOT NULL AUTO_INCREMENT , `discription` VARCHAR NULL , `amount` FLOAT NOT NULL , PRIMARY KEY (`no`)) ENGINE = InnoDB; 
+
+
+
+
